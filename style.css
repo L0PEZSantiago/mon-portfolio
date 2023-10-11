@@ -58,13 +58,18 @@ a {
 
 img {
     max-width: 100%;
-    height: auto;
+    
+}
+
+li {
+    margin-bottom: 1rem;
 }
 
 .list-unstyled {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-size: 19px;
 }
 
 .d-flex {
@@ -191,7 +196,8 @@ color: #333;
 }
 
 .socials .icon {
-    height: 18px;
+    height: 23px;
+    fill: #43545f;
 }
 
 
@@ -334,6 +340,7 @@ color: #333;
 }
 
 .service_icon svg {
+    fill: rgb(89, 89, 124);
     height: 35px;
 }
 
@@ -366,3 +373,37 @@ color: #333;
         margin-right: 2rem;
     }
 }
+
+
+/* ========== SKILLS ==========*/
+
+.skills h4, .skills p {
+    margin: 0 0 0.3rem;
+}
+
+.skills li {
+    background: #F5F5F5;
+    border-left: 3px solid rgba(91, 107, 120);
+    padding: .9rem 2rem;
+}
+
+.skills .progressbar {
+    background: #F5F5F5;
+    color: #FFF;
+    margin-bottom: 1rem;
+}
+
+
+.skills .bar{
+    background: #5b6c78;
+    padding: 1rem;
+}
+
+@media screen and (max-width:749px) {
+    
+}
+
+@media screen and (min-width:750px) {
+    
+}
+
