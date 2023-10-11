@@ -1,3 +1,5 @@
+/* Ceci est un commentaire */
+
 * {
     box-sizing: border-box;
 }
@@ -5,10 +7,6 @@
 html {
     font-size: 62.5%;
 }
-
-
-/* ========== BODY ========== */
-
 
 body {
     font-size: 1.6rem;
@@ -18,14 +16,9 @@ body {
     line-height: 1.6;
 }
 
-
-/* ========== H1, H2, H3, H4, H5, H6 ========== */
-
-
 h1, h2, h3, h4, h5, h6 {
     color: #000;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
 }
 
 h1, .h1 {
@@ -42,16 +35,6 @@ h3, .h3 {
     text-transform: uppercase;
 }
 
-@media screen and (min-width:750px) {
-    .title {
-        margin: 15px 0;
-    }
-} 
-
-
-/* ========== DIVERS ========== */
-
-
 a {
     text-decoration: none;
 }
@@ -67,42 +50,26 @@ img {
     padding: 0;
 }
 
+.container {
+    padding: 1rem 2rem;
+}
+
 .d-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
-/* ========== GRID ========== */
-
-
 .grid {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 
 .grid_item {
-    width: 50%;
-}
-
-@media screen and (max-width:749px) {
-   .grid {
-    flex-direction: column;
-   }
-   .grid_item {
     width: 100%;
-}
-}
-
-
-/* ========== CONTAINER ========== */
-
-
-.container {
-    padding: 1rem 2rem;
 }
 
 @media screen and (min-width:750px) {
@@ -113,9 +80,7 @@ img {
     }
 }
 
-
-/* ========== SECTIONS ========== */
-
+/* Sections */
 
 section {
     padding: 5.5rem 0;
@@ -131,10 +96,6 @@ section {
         text-align: center;
     }
 }
-
-
-/* ========== HEADER ========== */
-
 
 .header {
     background: #FFF;
@@ -171,10 +132,6 @@ color: #333;
     align-items: center;
 }
 
-
-/* ========== SOCIALS ========== */
-
-
 .socials{
     display: flex;
 }
@@ -186,10 +143,6 @@ color: #333;
 .socials .icon {
     height: 18px;
 }
-
-
-/* ========== BURGER ========== */
-
 
 .burger {
     background: none;
@@ -233,10 +186,6 @@ color: #333;
         display: none;
     }
 } 
-
-
-/* ========== HERO ========== */
-
 
 .hero {
     background: #5b6c78;
@@ -291,17 +240,13 @@ color: #333;
     }
 }
 
-
-/* ========== ABOUT ========== */
-
+.about .section-title {
+    margin-top: 2.8rem;
+}
 
 @media screen and (min-width:750px) {
     .about img{
         padding-right: 3rem;
-    }
-
-    .about .section-title {
-        margin: 0;
     }
 }  
 
@@ -309,18 +254,6 @@ color: #333;
     color: #333;
 }
 
+@media screen and (min-width:750px) {
 
-/* ========== SERVICES ========== */
-
-.services {
-    background: #F5F5F5;
-}
-
-.service_icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90px;
-    height: 90px;
-}
-
+} 
