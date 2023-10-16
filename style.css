@@ -322,6 +322,16 @@ section {
     text-transform: uppercase;
 }
 
+.hero_item.left {
+    animation-duration: 1s;
+    animation-name: slideInright;
+}
+
+.hero_item.right {
+    animation-duration: 1s;
+    animation-name: slideInleft;
+}
+
 @media screen and (max-width:749px) {
     .hero_item.left {
         order: 2;
@@ -500,6 +510,7 @@ section {
     .portfolio a {
         font-size: 1.4rem;
     }
+
     .portfolio .grid_item {
         max-width: 50%;
     }
@@ -508,10 +519,6 @@ section {
 @media screen and (min-width: 750px) {
     .portfolio-filters .grid_item {
         max-width: 25%;
-    }
-
-    .portfolio .grid_item {
-        
     }
 }
 
@@ -567,7 +574,8 @@ section {
     margin: 5rem auto auto auto;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
     outline-color: cadetblue;
     display: block;
     width: 100%;
@@ -589,7 +597,7 @@ section {
     text-transform: uppercase;
 }
 
-.form .btn:hover{
+.form .btn:hover {
     cursor: pointer;
     background: black;
 }
@@ -634,11 +642,12 @@ footer .socials a {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s;
 }
 
 footer .socials a:hover {
     background: #FFF;
-    color:black;
+    color: black;
 }
 
 
@@ -651,8 +660,28 @@ footer .grid {
     footer {
         text-align: left;
     }
-    
+
     footer .grid_item {
         max-width: 33.333%;
+    }
+}
+
+@keyframes slideInleft {
+    from {
+        transform: translatex(110%)
+    }
+
+    to {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes slideInright {
+    from {
+        transform: translatex(-110%)
+    }
+
+    to {
+        transform: translateX(0%)
     }
 }
