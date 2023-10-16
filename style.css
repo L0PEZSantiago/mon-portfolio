@@ -78,6 +78,10 @@ img {
     max-width: 100%;
 }
 
+ul {
+    padding: 2rem;
+}
+
 li {
     margin-bottom: 1rem;
 }
@@ -221,12 +225,15 @@ section {
     align-items: center;
 }
 
+.header .socials {
+    margin-top: 1.6rem;
+}
+
 /* ========== SOCIALS ========== */
 
 
 .socials {
     display: flex;
-    margin-top: 1.6rem;
 }
 
 .socials a {
@@ -370,7 +377,7 @@ section {
 /* ========== SERVICES ========== */
 
 .services {
-    background: #e6e4e4;
+    background: #f3f3f3;
 }
 
 .service_icon {
@@ -379,12 +386,12 @@ section {
     justify-content: center;
     width: 90px;
     height: 90px;
-    border: 2px solid #5b6c78;
+    border: 2px solid #000000;
     border-radius: 50%;
 }
 
 .service_icon svg {
-    fill: rgb(89, 89, 124);
+    fill: rgb(0, 0, 0);
     height: 35px;
 }
 
@@ -453,7 +460,7 @@ section {
 
 
 .portfolio {
-    background: #e6e4e4;
+    background: #f3f3f3;
 }
 
 .portfolio .grid_item {
@@ -515,6 +522,8 @@ section {
     background: #FFF;
     text-transform: uppercase;
     position: relative;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    border: 1px solid #EEE;
 }
 
 .card_inner {
@@ -546,4 +555,97 @@ section {
     align-items: center;
     justify-content: center;
     height: 100%;
+}
+
+
+/* ========== CONTACT ========== */
+
+
+.form {
+    max-width: 600px;
+    margin: 5rem auto auto auto;
+}
+
+.form input, .form textarea {
+    outline-color: cadetblue;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form textarea {
+    min-height: 200px;
+}
+
+.form .btn {
+    border: none;
+    background: #333;
+    color: #FFF;
+    width: auto;
+    min-width: 160px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.form .btn:hover{
+    cursor: pointer;
+    background: black;
+}
+
+
+/* ========== FOOTER ========== */
+
+
+footer {
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .socials {
+    text-align: center;
+    justify-content: center;
+}
+
+footer .socials .icon {
+    height: 25px;
+    fill: #FFF;
+}
+
+footer .socials li {
+    padding: 0 .7rem;
+}
+
+
+footer .socials a {
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    padding: 1rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .grid {
+    align-items: center;
+}
+
+
+@media screen and (min-width:750px) {
+    footer {
+        text-align: left;
+    }
+    
+    footer .grid_item {
+        max-width: 33.333%;
+    }
 }
