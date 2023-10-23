@@ -503,7 +503,7 @@
                 </p>
             </div>
 
-            <form action="contact.php" class="form">
+            <form action="https://api.staticforms.xyz/submit" method="post" class="form">
                 <label for="lastname">
                     <input type="text" name="lastname" id="lastname" placeholder="Nom">
                 </label>
@@ -515,11 +515,12 @@
                 </label>
                 <textarea name="message" id="message" placeholder="Message"></textarea>
                 <input type="submit" class="btn" value="Envoyer">
+                <input type="hidden" name="accessKey" value="fe44e874-2411-45fb-9caa-da5ec4655ace"> <!----- CLE OBTENUE PAR MAIL ----->
+                <input type="hidden" name="redirectTo" value="https://sankou69200.github.io/mon-portfolio/succes/success.html"> <!----- REDIRECTION ----->
+                <input type="text" name="honeypot" style="display: none;"> <!----- ANTI SPAM ----->
             </form>
         </div>
-
     </section>
-
     <footer>
         <div class="container">
             <div class="grid">
@@ -529,7 +530,8 @@
                 <div class="grid_item">
                     <ul class="socials list-unstyled">
                         <li>
-                            <a href="https://www.facebook.com/profile.php?id=100003527554091" target="_blank"><i class="fa-brands fa-facebook-f"></i> </a>
+                            <a href="https://www.facebook.com/profile.php?id=100003527554091" target="_blank"><i
+                                    class="fa-brands fa-facebook-f"></i> </a>
                         </li>
                         <li>
                             <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -551,10 +553,10 @@
         </div>
     </footer>
     <script>
-        /* Je fais une constante qui a pour nom currentYear mepermettant de mettre l'année à jour automatiquement, pour par la suite appeler cette constante */
-        const currentYear = new Date().getFullYear();
-        console.log
-        document.getElementById("currentYear").innerText = currentYear
+            /* Je fais une constante qui a pour nom currentYear mepermettant de mettre l'année à jour automatiquement, pour par la suite appeler cette constante */
+            const currentYear = new Date().getFullYear();
+            console.log
+            document.getElementById("currentYear").innerText = currentYear
     </script>
 </body>
 
