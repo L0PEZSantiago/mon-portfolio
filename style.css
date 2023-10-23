@@ -115,7 +115,7 @@ li {
 
 .category {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     color: #5b6c78;
 }
@@ -187,7 +187,7 @@ section {
 /* ========== HEADER ========== */
 
 
-.header {
+header {
     background: #FFF;
     border-bottom: 1px solid #EEE;
     position: fixed;
@@ -196,37 +196,37 @@ section {
     z-index: 1;
 }
 
-.header .logo {
+header .logo {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     letter-spacing: 2px;
 }
 
-.navbar {
+nav {
     display: none;
 }
 
-.header li {
+header li {
     display: inline-flex;
     align-items: center;
     padding: 0 .5rem;
 }
 
-.header a {
+header a {
     color: #333;
 }
 
 
-.header a:hover {
+header a:hover {
     color: #49bac9dc;
 }
 
-.header .right {
+header .right {
     display: flex;
     align-items: center;
 }
 
-.header .socials {
+header .socials {
     margin-top: 1.6rem;
 }
 
@@ -286,7 +286,7 @@ section {
 }
 
 @media screen and (min-width:750px) {
-    .navbar {
+    nav {
         display: flex;
     }
 
@@ -456,8 +456,26 @@ section {
     margin-bottom: 1rem;
 }
 
+.skills .bar_zéro {
+    width: 0%;
+}
 
-.skills .bar {
+.skills .bar_10 {
+    width: 10%;
+}
+
+.progressbar .bar_25 {
+    width: 25%;
+}
+
+.skills .bar_40 {
+    width: 40%;
+}
+.skills .bar_45 {
+    width: 45%;
+}
+
+.skills .bar_zéro, .bar_10, .bar_25, .bar_40, .bar_45 {
     background: #5b6c78;
     padding: 1rem;
 }
@@ -540,7 +558,7 @@ section {
 
 .card_title {
     margin: 0 0 1rem;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
 }
 
 .card_overlay {
@@ -595,6 +613,10 @@ section {
     min-width: 160px;
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+.form input{
+    justify-content: right;
 }
 
 .form .btn:hover {
