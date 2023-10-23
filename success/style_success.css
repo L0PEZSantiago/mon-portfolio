@@ -1,0 +1,57 @@
+html {
+    background-image: url(../images/bg_success.jpg);
+}
+
+.body {
+    max-height: 1200px;
+    font-size: 25px;
+}
+
+.redirect {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50%;
+    height: 900px;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.btn {
+    height: 5%;
+    width: 20%;
+    background-color: #FFF;
+    cursor: pointer
+}
+
+
+.btn a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover {
+    background-color: black;
+    color: #FFF;
+    transition: all 0.9s;
+    transform: scale(1.2);
+}
+
+.btn:not(:hover) {
+    transition: all 0.9s;
+}
+
+.btn:hover > a{
+    color: rgb(255, 255, 255);
+    transition: all 0.9s;
+}
+
+.btn :not(:hover)> a {
+    color: #FFF;
+    transition: all 0.9s;
+}
+
+
