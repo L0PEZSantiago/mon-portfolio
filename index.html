@@ -503,7 +503,7 @@
                 </p>
             </div>
 
-            <form action="https://api.staticforms.xyz/submit" method="post" class="form">
+            <form action="https://api.staticforms.xyz/submit" method="post" class="form" id="contact-form">
                 <label for="lastname">
                     <input type="text" name="lastname" id="lastname" placeholder="Nom">
                 </label>
@@ -511,7 +511,7 @@
                     <input type="text" name="firstname" id="firstname" placeholder="Prénom">
                 </label>
                 <label for="email">
-                    <input type="text" name="email" id="email" placeholder="E-mail">
+                    <input type="text" name="email" id="email" placeholder="Votre e-mail">
                 </label>
                 <textarea name="message" id="message" placeholder="Message"></textarea>
                 <input type="submit" class="btn" value="Envoyer">
@@ -558,6 +558,25 @@
             console.log
             document.getElementById("currentYear").innerText = currentYear
     </script>
+
+    <!--///// Script permettant d'empêcher l'envoi du formulaire si l'e-mail incorrect \\\\\-->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("contact-form");
+            const emailInput = document.getElementById("email");
+        
+            form.addEventListener("submit", function(event) {
+                const emailValue = emailInput.value;
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        
+                if (!emailPattern.test(emailValue)) {
+                    alert("L'adresse e-mail n'est pas valide. Veuillez la corriger.");
+                    event.preventDefault(); // Empêche l'envoi du formulaire
+                }
+            });
+        });
+        </script>
 </body>
 
 </html>
