@@ -120,6 +120,11 @@ li {
     color: #5b6c78;
 }
 
+@media screen and (max-width:749px) {
+    .category {
+       font-size: 1rem;
+    }
+}
 
 /* ========== GRID ========== */
 
@@ -498,7 +503,7 @@ header .socials {
 
 .portfolio-filters .grid_item {
     max-width: 50%;
-    margin-bottom: 0 0 1%;
+    margin-bottom: 1%;
 }
 
 .portfolio-filters a {
