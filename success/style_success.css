@@ -5,11 +5,15 @@ body {
 h1 {
     font-family: 'Ubuntu', sans-serif;
     color: #4f49bc;
+    animation-name: slideInright;
+    animation-duration: 1s;
 }
 
 p {
     font-family: 'Ubuntu', sans-serif;
     color: rgba(30, 30, 30, 0.814);
+    animation-name: slideInleft;
+    animation-duration: 1s;
 }
 
 
@@ -103,4 +107,25 @@ p {
         .img_success img {
             margin-left: 5%;
         }
+}
+
+@keyframes slideInright {
+    from {
+        transform: translatex(-110%)
+    }
+
+    to {
+        transform: translateX(0%)
+    }
+
+}
+
+@keyframes slideInleft {
+    from {
+        transform: translatex(110%)
+    }
+
+    to {
+        transform: translateX(0%)
+    }
 }
