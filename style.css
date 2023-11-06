@@ -74,6 +74,12 @@ a {
     text-decoration: none;
 }
 
+.about img {
+    object-fit: contain;
+    width: 100%;
+    height: 5%;    
+}
+
 img {
     max-width: 100%;
     object-fit: cover;
@@ -370,6 +376,9 @@ header .socials {
 
 /* ========= ABOUT ========= */
 
+.about .container .grid_item {
+    height: 80%;
+}
 
 @media screen and (min-width:750px) {
     .about img {
