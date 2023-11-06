@@ -376,14 +376,13 @@ header .socials {
 
 /* ========== ABOUT ========== */
 
-
-.about img {
-    border-radius: 25%;
+.about .container .grid_item {
+    height: 80%;
 }
-
 @media screen and (min-width:750px) {
     .about img {
-        padding-right: 3rem;
+        padding-right: 1rem;
+        width: 80%;
     }
 
     .about .section-title {
