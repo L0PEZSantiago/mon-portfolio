@@ -1,5 +1,6 @@
 body {
     background-color: rgb(152, 152, 250);
+    padding: 1rem;
 }
 
 h1 {
@@ -7,13 +8,23 @@ h1 {
     color: #4f49bc;
     animation-name: slideInright;
     animation-duration: 1s;
+    margin: 0;
 }
 
-p {
+.redirect p:first-of-type {
+    font-family: 'Ubuntu', sans-serif;
+        color: #4f49bc;
+        animation-name: slideInright;
+        animation-duration: 1s;
+
+}
+
+.redirect p:last-of-type {
     font-family: 'Ubuntu', sans-serif;
     color: rgba(30, 30, 30, 0.814);
     animation-name: slideInleft;
     animation-duration: 1s;
+    font-size: 14px;
 }
 
 
@@ -21,7 +32,7 @@ p {
 
 :root {
     --point-color: #4f49bc;
-    --size: 4px;
+    --size: 3px;
 }
 
 .loader {
@@ -77,6 +88,23 @@ p {
         width: 90%;
         margin-left: 10%;
     }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .redirect p:first-of-type {
+        font-size: 11px;
+    }
+
+    .redirect p:last-of-type {
+        font-size: 8px;
+    }
+
+    :root {
+            --point-color: #4f49bc;
+            --size: 1.5px;
+        }
 }
 
 @media screen and (min-width:598px) {

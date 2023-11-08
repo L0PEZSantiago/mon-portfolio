@@ -27,8 +27,8 @@ console.log(isTrue);
 let chiffre1 = 1;
 let chiffre2 = 2;
 
-console.log(chiffre1, chiffre2);
-console.log(chiffre1 + chiffre2);
+// console.log(chiffre1, chiffre2);
+// console.log(chiffre1 + chiffre2);
 
 // Pour avoir le type
 
@@ -41,6 +41,16 @@ console.log(typeof chiffre4 + typeof chiffre5);
 // litéraux de gabarits qui sert à alléger la syntax permettant de réduire le code et éviter les erreurs sur la console
 
 let test = "test " + myVar; // On peut mettre un espace dans le "test" pour que ce soit plus lisible. Le + va concat le test et le myVar, il ne va pas les additionner.
-let test2 = `test ${myVar}`; // Ceci est un litéraux de gabarit, cela donne le même résultat que la commande juste au dessus.
+let test2 = `test ${myVar} azdiohzd`; // Ceci est un litéraux de gabarit, cela donne le même résultat que la commande juste au dessus.
 
-console.log(test2)  
+// console.log(test2)
+
+if (chiffre1 < chiffre2) {
+    console.log('condition est valide');
+}
+
+if (chiffre1 < chiffre2) {  // On met deux signes égal pour tester une condition, on peut en mettre trois pour qu'il définisse le type (chiffre, chaine de caractère...)
+    let test3 = chiffre1 + chiffre2;
+    console.log(test3)
+}
+
