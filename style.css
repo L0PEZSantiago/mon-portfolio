@@ -475,6 +475,10 @@ header .socials {
     width: 10%;
 }
 
+.skills .bar_15 {
+    width: 15%;
+}
+
 .progressbar .bar_25 {
     width: 25%;
 }
@@ -482,11 +486,16 @@ header .socials {
 .skills .bar_40 {
     width: 40%;
 }
+
 .skills .bar_45 {
     width: 45%;
 }
 
-.skills .bar_zéro, .bar_10, .bar_25, .bar_40, .bar_45 {
+.skills .bar_65 {
+    width: 65%;
+}
+
+.skills .bar_zéro, .bar_10, .bar_15, .bar_25, .bar_40, .bar_45, .bar_65 {
     background: #5b6c78;
     padding: 1rem;
 }
