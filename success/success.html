@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4f49bc">
+    <title>Bravo !</title>
+
+    <!--  \\\  FONTS ///  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Inter&family=Poppins:wght@300;500;700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <!--  \\\  CSS ///  -->
+
+    <link rel="stylesheet" href="style_success.css">
+</head>
+
+
+<body onload="redirection('../index.html')">
+    <div class="redirect">
+        <h1>Merci pour votre message !</h1>
+        <p>Je vous recontacterai dans les plus brefs délais.</p>
+        <p>Redirection vers l'accueil, veuillez patienter...</p>
+        <div class="loader">
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+            <span class="loader__element"></span>
+        </div>
+        <div class="img_success">
+            <img src="../images/bg_happy.png">
+        </div>
+        <script src="redirect.js"></script>
+    </div>
+</body> 
+
+</html>
