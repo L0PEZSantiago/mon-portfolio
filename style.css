@@ -184,6 +184,10 @@ section {
     font-size: 3.8rem;
 }
 
+.grid_item h2 {
+    display: flex;
+    justify-content: center;
+}
 .section-header {
     text-align: center;
 }
@@ -477,10 +481,6 @@ header .socials {
     margin-bottom: 1rem;
 }
 
-.skills .bar_zéro {
-    width: 0%;
-}
-
 .skills .bar_10 {
     width: 10%;
 }
@@ -501,11 +501,19 @@ header .socials {
     width: 45%;
 }
 
+.skills .bar_55 {
+    width: 55%;
+}
+
+.skills .bar_60 {
+    width: 60%;
+}
+
 .skills .bar_65 {
     width: 65%;
 }
 
-.skills .bar_zéro, .bar_10, .bar_15, .bar_25, .bar_40, .bar_45, .bar_65 {
+.skills .bar_10, .bar_15, .bar_25, .bar_40, .bar_45, .bar_55, .bar_60, .bar_65 {
     background: #5b6c78;
     padding: 1rem;
 }
