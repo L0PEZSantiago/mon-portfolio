@@ -300,7 +300,7 @@ header .socials {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
+        -webkit-columnsflex-direction: column;
         position: fixed;
         top: 75px;
         left: 110%; /* JE CACHE MA NAV */
@@ -310,20 +310,19 @@ header .socials {
         height: calc(100vh - 55px);
         background: #F5F5F5;
         transition: all 0.3s ease-in-out;
-   
+    }
     
-    li {
+    nav .menu li {
             display: flex;
             justify-content: center;
-
         }
 
-    a {
+    nav .menu li a {
             display: block;
             font-size: 2rem;
             padding: 2rem;
         }
-    }
+   
     .show-nav nav {
             opacity: 1;
             width: 100%;
