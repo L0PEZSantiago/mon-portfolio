@@ -9,6 +9,6 @@ const redirection = (url) => {
         },
 
         // Dans un 2ème temps j'ajoute le temps avant redirection à ma fonction
-        9000
+        4500
     );
 }

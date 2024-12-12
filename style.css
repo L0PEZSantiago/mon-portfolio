@@ -217,10 +217,6 @@ header .logo {
     letter-spacing: 2px;
 }
 
-nav {
-    display: none;
-}
-
 header li {
     display: inline-flex;
     align-items: center;
@@ -264,7 +260,6 @@ header .socials {
 
 /* ========== BURGER ========== */
 
-
 .burger {
     background: none;
     border: none;
@@ -300,6 +295,60 @@ header .socials {
     transform: translateY(8px);
 }
 
+@media screen and (max-width:749px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 75px;
+        left: 110%; /* JE CACHE MA NAV */
+        overflow: hidden;
+        opacity: 0;
+        width: 0;
+        height: calc(100vh - 55px);
+        background: #F5F5F5;
+        transition: all 0.3s ease-in-out;
+   
+    
+    li {
+            display: flex;
+            justify-content: center;
+
+        }
+
+    a {
+            display: block;
+            font-size: 2rem;
+            padding: 2rem;
+        }
+    }
+    .show-nav nav {
+            opacity: 1;
+            width: 100%;
+            left: 0;
+            z-index: 2;
+        }
+
+    .show-nav .burger .bar {
+        width: 0;
+    }
+
+    .burger .bar::before,
+    .burger .bar::after {
+        transition: all 0.3s ease-out;
+    }
+
+    .show-nav .burger .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .show-nav .burger .bar::after {
+        transform: rotate(-45deg);
+    }
+}
+
 @media screen and (min-width:750px) {
     nav {
         display: flex;
@@ -309,6 +358,8 @@ header .socials {
         display: none;
     }
 }
+
+
 
 
 /* ========== HERO ========== */
@@ -348,6 +399,7 @@ header .socials {
 }
 
 @media screen and (max-width:749px) {
+
     .hero_item.left {
         order: 2;
     }
