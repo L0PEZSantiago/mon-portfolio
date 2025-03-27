@@ -246,6 +246,7 @@ header .socials {
 
 .socials {
     display: flex;
+
 }
 
 .socials a {
@@ -257,6 +258,15 @@ header .socials {
     fill: #43545f;
 }
 
+.socials li a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: red !important;
+    transition: background-color 200ms linear;
+  }
 
 /* ========== BURGER ========== */
 
@@ -588,6 +598,10 @@ header .socials {
 .portfolio-filters .grid_item {
     max-width: 50%;
     margin-bottom: 1%;
+}
+
+.portfolio .grid_item.hide {
+    display: none;
 }
 
 .portfolio-filters a {
