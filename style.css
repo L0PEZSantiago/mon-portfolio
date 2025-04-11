@@ -147,6 +147,14 @@ li {
     padding: 1rem;
     flex-grow: 1;
     flex-shrink: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.portfolio-cards>.grid_item:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px #676767c0; 
+    box-shadow: 5px 5px 15px 5px #676767c0;    
+    transform: scale(1.01);
 }
 
 @media screen and (max-width:749px) {
@@ -574,7 +582,11 @@ header .socials {
     width: 65%;
 }
 
-.skills .bar_10, .bar_15, .bar_25, .bar_40, .bar_45, .bar_55, .bar_60, .bar_65 {
+.skills .bar_100 {
+    width: 100%;
+}
+
+.skills .bar_10, .bar_15, .bar_25, .bar_40, .bar_45, .bar_55, .bar_60, .bar_65, .bar_100 {
     background: #5b6c78;
     padding: 1rem;
 }

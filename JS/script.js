@@ -1,81 +1,151 @@
+let div = document.createElement('div');
+div.classList.add('top');
+div.innerHTML = `<span>Top zone</span>`;
+// console.log(header.nextElementSibling);
+
+// fin de la théorie 
+
+/* Menu mobile */
+
 function menuMobile() {
-    const btn = document.querySelector('.burger')
-    const header = document.querySelector('header');
-    const links = document.querySelectorAll('.navbar a');
+  const btn = document.querySelector('.burger');
+  const header = document.querySelector('.header');
+  const links = document.querySelectorAll('.menu a');
 
+  btn.addEventListener('click', () => {
+    header.classList.toggle('show-nav');
+  });
 
-    btn.addEventListener('click', () => {
-        header.classList.toggle('show-nav');
-    })
-
-
-    // J'utilise un forEach pour parcourir chaque lien et ajouter un gestionnaire d'evenement 'click'
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            header.classList.remove('show-nav');
-        });
-    })
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      header.classList.remove('show-nav');
+    });
+  });
 }
 
-menuMobile()
+menuMobile();
 
-function tabFilters() {
-    const tabs = document.querySelectorAll('.portofolio-filters a');
-    const projects = document.querySelectorAll('.portfolio .card');
+/* Porfolio */
 
-    const resetActive = () => {
-        tabs.forEach(element => {
-            element.classList.remove('active');
-        });
-    }
+function tabsFilters() {
+  const tabs = document.querySelectorAll('.portfolio-filters a');
+  const projets = document.querySelectorAll('.portfolio .card');
 
-    const showProJects = (element) => {
-        console.log(element);
-        projects.forEach(project => {
-            
-            let filter = project.getAttribute('data-category');
-
-            if (element === 'all') {
-                project.parentNode.classList.remove('hide');
-                return
-            }
-
-            if(filter !== element) {
-                project.parentNode.classList.add('hide');
-            } else {
-               project.parentNode.classList.remove('hide');
-            }
-        });
-    }
-
-    tabs.forEach(element => {
-        element.addEventListener('click', (event) => {
-            event.preventDefault();
-            let filter = element.getAttribute('data-filter');
-            showProJects(filter);
-            element.classList.add('active');
-        });
+  const resetActiveLinks = () => {
+    tabs.forEach(elem => {
+      elem.classList.remove('active');
     })
+  }
+
+  const showProjets = (elem) => {
+    console.log(elem);
+    projets.forEach(projet => {
+
+      let filter = projet.getAttribute('data-category');
+
+      if (elem === 'all') {
+        projet.parentNode.classList.remove('hide');
+        return
+      }
+
+      console.log('tutu');
+      // ne sera pas pris en compte !
+      /*if (filter !== elem) {
+        projet.parentNode.classList.add('hide');
+      } else {
+        projet.parentNode.classList.remove('hide');
+      }*/
+
+      // option pour les plus motivés - opérateur ternaire
+      filter !== elem ? projet.parentNode.classList.add('hide') : projet.parentNode.classList.remove('hide');
+
+    });
+  }
+
+  tabs.forEach(elem => {
+    elem.addEventListener('click', (event) => {
+      event.preventDefault();
+      let filter = elem.getAttribute('data-filter');
+      showProjets(filter)
+      resetActiveLinks();
+      elem.classList.add('active');
+    });
+  })
 }
-showProJects();
-tabFilters();
-// Séquence de touches souhaitée (par exemple, "abc")
-// const sequence = ['s','a','n','t','i'];
-// let currentSequence = [];
 
-// // Écouter les événements de touches
-// document.addEventListener('keydown', (event) => {
-//     // Ajouter la touche pressée à la séquence actuelle
-//     currentSequence.push(event.key);
+tabsFilters()
 
-//     // Vérifier si la séquence actuelle correspond à la séquence souhaitée
-//     if (currentSequence.join('').includes(sequence.join(''))) {
-//         // Rediriger l'utilisateur vers une autre page
-//         window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-//     }
+function showProjectDetails() {
+  const links = document.querySelectorAll('.card__link');
+  const modals = document.querySelectorAll('.modal');
+  const btns = document.querySelectorAll('.modal__close');
 
-//     // Limiter la longueur de la séquence actuelle pour éviter les dépassements
-//     if (currentSequence.length > sequence.length) {
-//         currentSequence.shift();
-//     }
-// });
+  const hideModals = () => {
+    modals.forEach(modal => {
+      modal.classList.remove('show');
+    });
+  }
+
+  links.forEach(elem => {
+    elem.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector(`[id=${elem.dataset.id}]`).classList.add('show');
+    });
+  });
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+      hideModals();
+    });
+  });
+
+}
+
+showProjectDetails();
+
+// effets
+
+const observerIntersectionAnimation = () => {
+  const sections = document.querySelectorAll('section');
+  const skills = document.querySelectorAll('.skills .bar');
+
+  sections.forEach((section, index) => {
+    if (index === 0) return;
+    section.style.opacity = "0";
+    section.style.transition = "all 1.6s";
+  });
+
+  skills.forEach((elem, index) => {
+
+    elem.style.width = "0";
+    elem.style.transition = "all 1.6s";
+  });
+
+  let sectionObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let elem = entry.target;
+        elem.style.opacity = 1;
+      }
+    });
+  });
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
+
+  let skillsObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let elem = entry.target;
+        elem.style.width = elem.dataset.width + '%';
+      }
+    });
+  });
+
+  skills.forEach(skill => {
+    skillsObserver.observe(skill);
+  });
+}
+
+observerIntersectionAnimation();
