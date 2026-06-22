@@ -47,8 +47,6 @@ function tabsFilters() {
         projet.parentNode.classList.remove('hide');
         return
       }
-
-      console.log('tutu');
       // ne sera pas pris en compte !
       /*if (filter !== elem) {
         projet.parentNode.classList.add('hide');

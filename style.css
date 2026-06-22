@@ -645,6 +645,10 @@ header .socials {
     }
 
     .portfolio .grid_item {
+        max-width: 100%;
+    }
+
+    .portfolio-filters .grid_item {
         max-width: 50%;
     }
 }
@@ -665,6 +669,13 @@ header .socials {
     position: relative;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     border: 1px solid #EEE;
+}
+
+.card_image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
 .card_inner {
